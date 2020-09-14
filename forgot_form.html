@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forgot Password</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>myMovies Xpress!</h2><br>
+  <form action="./logon.php" method="post">
+    Username:<input type="text" name="Username" required="true"><br>
+    
+    <button type="submit" value="Submit">Submit</button> <button type="reset" value="Reset">Clear</button> <button onclick="confirmCancel('forgot');">Cancel</button><br>
+    <input type="hidden" name="action" value="forgot">
+  </form>
+</body>
+</html>

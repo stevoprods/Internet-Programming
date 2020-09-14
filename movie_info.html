@@ -1,0 +1,18 @@
+<?php
+if (is_null($getMovie))
+	echo "<div class='modal-footer'>
+		<p>Invalid Movie ID!</p>
+	</div>";
+else {
+	   echo "<div class='modal-header'>
+		   <span class='close'>[Close]</span>
+		   <h2>{$getMovie['Title']} ({$getMovie['Year']}) Rated {$getMovie['Rating']} {$getMovie['Runtime']}<br />{$getMovie['Genre']}</h2>
+	   </div>
+	   <div class='modal-body'>
+		   <p>Actors: {$getMovie['Title']}<br />Directed By: {$getMovie['Director']}<br />Written By: {$getMovie['Writer']}</p>
+	   </div>
+	   <div class='modal-footer'>
+		   <p>{$getMovie['Plot']}</p>
+	   </div>";
+}
+?>  

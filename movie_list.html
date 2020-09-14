@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie list</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>myMovies Xpress!</h2><br>
+  <?php
+  $movieId = $_SESSION['cart order'];
+  echo "<table>";
+  foreach($movieId as $i){
+        $getMovieData = getMovieData($movieId);
+        echo "<tr>";
+        if(is_null($getMovieData))
+                echo "<tr><td>The movie ID value is invalid</td></tr>";
+        else {
+                echo '<td><img src="' . $getMovieData['Poster'] . '" height="110px"></td>';
+                echo "<td>" . $getMovieData['Title'] . " (" . $getMovieData['Year'] . ")</td>";
+				if(!forEmail){
+					echo '<td><a href="javascript:void(0);" onclick="displayMovieInformation("' . $getMovieData['ID'] . '");">View More Info</a></td>';
+					echo '<td><a href="javascript:void(0);" onclick="confirmRemove("' . $getMovieData['Title'] . '", "' . $getMovieData['ID'] . '");">X</a></td>';
+				}
+		}
+        echo "</tr>";
+  }
+  echo "</table>";
+  ?>
+</body>
+</html>

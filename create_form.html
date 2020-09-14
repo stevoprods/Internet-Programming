@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>myMovies Xpress!</h2><br>
+  <form action="./logon.php" onsubmit="return validateCreateAccountForm();" method="post">
+    Display Name:<input type="text" name="DisplayName" required="true"><br>
+    Email Address:<input type="text" name="EmailAddress" required="true"><br>
+    Confirm Email Address:<input type="text" name="ConfirmEmailAddress" required="true"><br>
+    Username:<input type="text" name="Username" required="true"><br>
+    <br>
+    Password:<input type="password" name="Password" required="true"><br>
+    Confirm Password:<input type="password" name="Confirm Password" required="true"><br>
+    <button type="submit" value="Submit">Create Account</button> <button type="reset" value="Reset">Clear</button> <button onclick="confirmCancel('create');">Cancel</button><br>
+    <input type="hidden" name="action" value="create">
+  </form>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>reset</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>myMovies Xpress!</h2>
+  <p>To reset, please enter your information</p>
+  <form action="./logon.php" onsubmit="return validateResetPasswordForm();" method="post">
+    Password:<input type="password" name="Password" required="true"><br>
+    Confirm Password:<input type="password" name="Confirm Password" required="true"><br>
+    <button type="submit" value="Submit">Reset Password</button><button type="reset" value="Reset">Clear</button><button onclick="confirmCancel('reset');">Cancel</button>
+    <input type="hidden" name="action" value="reset"> <input type="hidden" name="user_id" value="<?php echo $userId;?>">
+  </form>
+  <footer>
+    <a href="/~fs41640/">ePortfolio</a>
+  </footer>
+</body>
+</html>

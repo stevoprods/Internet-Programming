@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search</title>
+  <script src="script.js"></script>
+</head>
+<body>
+	<?php
+	$displayName = $_SESSION['credentials'][2];
+	echo "Welcome, $displayName" . '<a href="javascript:confirmLogout()">(logout)</a>';
+	?>
+  <h2>myMovies Xpress!</h2>
+  <form action="./search.php" method="post"> 
+  <p><input type="text" name="searchterm"></p>
+
+  <p><button onclick="window.location.href='./index.php'">Cancel</button><button type="reset">Clear</button><button type="submit" value="Submit">Search</button></p>
+  </form
+</body>
+</html>
